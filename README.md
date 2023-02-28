@@ -1,7 +1,10 @@
 # Kame Font
 EN : Kame is a hybrid and mutative typography with three weights. Acute, legible and performative, it brings trouble within the rigidity and strictness of compositions. The two weights **Kame Poster Regular** and **Kame Poster Black** allow for cascading phrase arrangements and add importance to readability. Finally, a tiny one, the **Kame Book**, completes the family for common text uses. Inspired by humanist font design and modern angularity, Kame cut the letters, lightening their display.
 
+![Kame Poster Black Specimen](/documentation/specimen/img/KAME-SPECIMEN.jpg)
 ![Kame Poster Black Specimen](/documentation/specimen/Kame-Specimen.png)
+![Kame Poster Black Specimen](/documentation/specimen/img/KAME-SPECIMEN20.jpg)
+
 
 ---
 
