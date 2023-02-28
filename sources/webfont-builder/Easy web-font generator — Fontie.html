@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="pixelsvsbytes">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Easy web-font generator — Fontie">
+    <meta property="og:description" content="Fontie converts your desktop-fonts into smooth & reliable web-fonts and generates the CSS @font-face. Various options allow you to optimize the output.">
+    <meta property="og:image" content="https://fontie.pixelsvsbytes.com/assets/opengraph/default.png">
+    <meta property="og:url" content="https://fontie.pixelsvsbytes.com/webfont-generator">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Fontie converts your desktop-fonts into smooth & reliable web-fonts and generates the CSS @font-face. Various options allow you to optimize the output.">
+    <link rel="canonical" href="https://fontie.pixelsvsbytes.com/webfont-generator">
+    <title>Easy web-font generator — Fontie</title>
+    <style>
+        @import url("/assets/fonts/Linux Libertine.css");
+        @import url("/assets/fonts/Linux Biolinum.css");
+        @import url("/assets/fonts/FlowyButtons-Regular.css");
+        @import url("/styles/generic.css");
+        @import url("/styles/page.css");
+        @import url("/styles/descriptions.css");
+    </style>
+    <script type="text/javascript" src="/support/smoothie/require.min.js"></script>
+    <script type="text/javascript" src="/support/smoothie/utils/boot.js" async></script>
+</head>
+
+<body>
+    <div id="Viewport">
+        <div id="Page" class="triggerUploadFonts" data-stack-id="webfont-generator">
+    <header id="Header" class="Section">
+        <div class="Logo">
+            <span class="FlowyButton logo_fontie"></span>
+            <h1>Fontie <small>web-font generator</small></h1>
+        </div>
+        <ul class="Navigation">
+            <li><a href="https://pixelsvsbytes.com">by Pixels|Bytes</a></li>
+        </ul>
+    </header>
+    <article id="Description" class="Section Panel">
+        <section class="Content Text">
+            <p><strong>Fontie easily converts your desktop-fonts into smooth & good-looking web-fonts that work everywhere. It also generates the CSS @font-face that is required to use the fonts on your website. Various options give you the possibilty to fix and optimize your web-fonts.</strong></p>
+        </section>
+        <div class="Content Columns">
+            <section class="Content Text">
+                <h3>Various formats</h3>
+                <p>Fontie can convert any TTF & OTF desktop-font into a WOFF, WOFF2, EOT, SVG, TTF & OTF web-font. The generated CSS @font-face automatically chooses the best font for each browser.</p>
+            </section>
+            <section class="Content Text">
+                <h3>Easy subsetting</h3>
+                <p>Fonts usually contain a lot of characters that you don't need on your website. Fontie allows you to remove unneeded characters from the font to reduce the file size of the web-font.</p>
+            </section>
+            <section class="Content Text">
+                <h3>Automatic hinting</h3>
+                <p>Hinting is what separates good-looking fonts from bad fonts. Fontie uses Werner Lemberg's <a href="http://www.freetype.org/ttfautohint/">ttfautohint</a>, one of the best auto-hinters available, to automatically add hints to your font.</p>
+            </section>
+        </div>
+    </article>
+    <div id="App" class="Section Panel">
+        <form id="Uploader" action="javascript:">
+            <div class="Action">
+                <label><span class="FlowyButton button_plus"></span> <strong>Add your font files (or just drop them on the page)</strong><input class="triggerUploadFonts" type="file" multiple></label>
+            </div>
+        </form>
+        <form id="Generator" action="javascript:">
+            <ul id="UploadList" class="Listing"><li class="Upload" data-template><input type="hidden" name="font"><progress max="100" value="0"></progress><span></span> <button class="triggerRemoveUpload" title="Remove font" type="button">⨯</button></li></ul>
+            <ul class="Listing">
+                <li id="Formats" class="Optionset">
+                    <h3><button class="ActiveStateTrigger" type="button"><strong>Formats</strong> <small class="Description"><span class="output"></span></small></button></h3>
+                    <div class="Columns">
+                        <ul class="Content">
+                            <li><label><input type="checkbox" name="output" value="woff" checked> <span>Web Open Font Format</span></label></li>
+                            <li><label><input type="checkbox" name="output" value="woff2" checked> <span>Web Open Font Format 2</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input type="checkbox" name="output" value="eot" checked> <span>Embedded OpenType</span></label></li>
+                            <li><label><input type="checkbox" name="output" value="svg" checked> <span>Scalable Vector Graphics</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input type="checkbox" name="output" value="ttf"> <span>TrueType Font</span></label></li>
+                            <li><label><input type="checkbox" name="output" value="otf"> <span>OpenType Font</span></label></li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="Subsetting" class="Optionset">
+                    <h3><button class="ActiveStateTrigger" type="button"><strong>Subsetting</strong> <small class="Description"><span class="lang"></span></small></button></h3>
+                    <div id="SubsetSelectors" class="Columns Simple">
+                        <ul class="Content">
+                            <li><label><input class="Latin triggerUpdateRanges" type="checkbox" name="lang" checked data-description="Latin"> <span>Include Latin characters</span></label></li>
+                            <li><label><input class="Greek triggerUpdateRanges" type="checkbox" name="lang" data-description="Greek"> <span>Include Greek characters</span></label></li>
+                            <li><label><input class="Cyrillic triggerUpdateRanges" type="checkbox" name="lang" data-description="Cyrillic"> <span>Include Cyrillic characters</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input class="Arabic triggerUpdateRanges" type="checkbox" name="lang" data-description="Arabic"> <span>Include Arabic characters</span></label></li>
+                            <li><label><input class="Hebrew triggerUpdateRanges" type="checkbox" name="lang" data-description="Hebrew"> <span>Include Hebrew characters</span></label></li>
+                            <li><label><input class="Japanese triggerUpdateRanges" type="checkbox" name="lang" data-description="Japanese"> <span>Include Japanese characters</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input class="Entities triggerUpdateRanges" type="checkbox" name="lang" checked data-description="HTML entity"> <span>Include HTML entities</span></label></li>
+                            <li><label><input class="Features triggerUpdateRanges" type="checkbox" name="lang" data-description="font feature"> <span>Include font features</span></label></li>
+                            <li><label><input class="DisableTrigger" type="checkbox" name="lang" data-description="all existing"> <span>Keep existing characters</span></label></li>
+                        </ul>
+                    </div>
+                    <div id="SubsetRanges" class="Columns Advanced triggerUpdateSelectors">
+                        <div class="Content">
+                            <h4>Unicode ranges</h4>
+                            <select name="ranges" multiple>
+                                <option value="0020-007F,20AC" class="Latin SelectorUpdater" selected="">Basic Latin (+ Euro)</option>
+                                <option value="00A0-00FF" class="Latin SelectorUpdater" selected="">Latin-1 Supplement</option>
+                                <option value="0100-017F">Latin Extended-A</option>
+                                <option value="0180-024F">Latin Extended-B</option>
+                                <option value="0250-02AF">IPA Extensions</option>
+                                <option value="02B0-02FF">Spacing Modifier Letters</option>
+                                <option value="0300-036F">Combining Diacritical Marks</option>
+                                <option value="0370-03FF,20AC" class="Greek SelectorUpdater">Greek and Coptic (+ Euro)</option>
+                                <option value="0400-04FF,20BD" class="Cyrillic SelectorUpdater">Cyrillic (+ Ruble)</option>
+                                <option value="0500-052F" class="Cyrillic SelectorUpdater">Cyrillic Supplementary</option>
+                                <option value="0530-058F">Armenian</option>
+                                <option value="0590-05FF" class="Hebrew SelectorUpdater">Hebrew</option>
+                                <option value="0600-06FF" class="Arabic SelectorUpdater">Arabic</option>
+                                <option value="0700-074F">Syriac</option>
+                                <option value="0750–077F" class="Arabic SelectorUpdater">Arabic Supplement</option>
+                                <option value="0780-07BF">Thaana</option>
+                                <option value="07C0–07FF">N'Ko</option>
+                                <option value="0800–083F">Samaritan</option>
+                                <option value="0840–085F">Mandaic</option>
+                                <!--option value="0860-089F">no unicode block for this range</option-->
+                                <option value="08A0–08FF">Arabic Extended-A</option>
+                                <option value="0900-097F">Devanagari</option>
+                                <option value="0980-09FF">Bengali</option>
+                                <option value="0A00-0A7F">Gurmukhi</option>
+                                <option value="0A80-0AFF">Gujarati</option>
+                                <option value="0B00-0B7F">Oriya</option>
+                                <option value="0B80-0BFF">Tamil</option>
+                                <option value="0C00-0C7F">Telugu</option>
+                                <option value="0C80-0CFF">Kannada</option>
+                                <option value="0D00-0D7F">Malayalam</option>
+                                <option value="0D80-0DFF">Sinhala</option>
+                                <option value="0E00-0E7F">Thai</option>
+                                <option value="0E80-0EFF">Lao</option>
+                                <option value="0F00-0FFF">Tibetan</option>
+                                <option value="1000-109F">Myanmar</option>
+                                <option value="10A0-10FF">Georgian</option>
+                                <option value="1100-11FF">Hangul Jamo</option>
+                                <option value="1200-137F">Ethiopic</option>
+                                <option value="1380–139F">Ethiopic Supplement</option>
+                                <option value="13A0-13FF">Cherokee</option>
+                                <option value="1400-167F">Unified Canadian Aboriginal Syllabics</option>
+                                <option value="1680-169F">Ogham</option>
+                                <option value="16A0-16FF">Runic</option>
+                                <option value="1700-171F">Tagalog</option>
+                                <option value="1720-173F">Hanunoo</option>
+                                <option value="1740-175F">Buhid</option>
+                                <option value="1760-177F">Tagbanwa</option>
+                                <option value="1780-17FF">Khmer</option>
+                                <option value="1800-18AF">Mongolian</option>
+                                <option value="18B0–18FF">Unified Canadian Aboriginal Syllabics Extended</option>
+                                <option value="1900-194F">Limbu</option>
+                                <option value="1950-197F">Tai Le</option>
+                                <option value="1980–19DF">New Tai Lue</option>
+                                <option value="19E0-19FF">Khmer Symbols</option>
+                                <option value="1A00–1A1F">Buginese</option>
+                                <option value="1A20–1AAF">Tai Tham</option>
+                                <option value="1AB0–1AFF">Combining Diacritical Marks Extended</option>
+                                <option value="1B00–1B7F">Balinese</option>
+                                <option value="1B80–1BBF">Sundanese</option>
+                                <option value="1BC0–1BFF">Batak</option>
+                                <option value="1C00–1C4F">Lepcha</option>
+                                <option value="1C50–1C7F">Ol Chiki</option>
+                                <!--option value="1C80-1CBF">no unicode block for this range</option-->
+                                <option value="1CC0–1CCF">Sundanese Supplement</option>
+                                <option value="1CD0–1CFF">Vedic Extensions</option>
+                                <option value="1D00-1D7F">Phonetic Extensions</option>
+                                <option value="1D80–1DBF">Phonetic Extensions Supplement</option>
+                                <option value="1DC0–1DFF">Combining Diacritical Marks Supplement</option>
+                                <option value="1E00-1EFF">Latin Extended Additional</option>
+                                <option value="1F00-1FFF" class="Greek SelectorUpdater">Greek Extended</option>
+                                <option value="2000-206F">General Punctuation</option>
+                                <option value="2070-209F">Superscripts and Subscripts</option>
+                                <option value="20A0-20CF">Currency Symbols</option>
+                                <option value="20D0-20FF">Combining Diacritical Marks for Symbols</option>
+                                <option value="2100-214F">Letterlike Symbols</option>
+                                <option value="2150-218F">Number Forms</option>
+                                <option value="2190-21FF">Arrows</option>
+                                <option value="2200-22FF">Mathematical Operators</option>
+                                <option value="2300-23FF">Miscellaneous Technical</option>
+                                <option value="2400-243F">Control Pictures</option>
+                                <option value="2440-245F">Optical Character Recognition</option>
+                                <option value="2460-24FF">Enclosed Alphanumerics</option>
+                                <option value="2500-257F">Box Drawing</option>
+                                <option value="2580-259F">Block Elements</option>
+                                <option value="25A0-25FF">Geometric Shapes</option>
+                                <option value="2600-26FF">Miscellaneous Symbols</option>
+                                <option value="2700-27BF">Dingbats</option>
+                                <option value="27C0-27EF">Miscellaneous Mathematical Symbols-A</option>
+                                <option value="27F0-27FF">Supplemental Arrows-A</option>
+                                <option value="2800-28FF">Braille Patterns</option>
+                                <option value="2900-297F">Supplemental Arrows-B</option>
+                                <option value="2980-29FF">Miscellaneous Mathematical Symbols-B</option>
+                                <option value="2A00-2AFF">Supplemental Mathematical Operators</option>
+                                <option value="2B00-2BFF">Miscellaneous Symbols and Arrows</option>
+                                <option value="2C00–2C5F">Glagolitic</option>
+                                <option value="2C60–2C7F">Latin Extended-C</option>
+                                <option value="2C80–2CFF">Coptic</option>
+                                <option value="2D00–2D2F">Georgian Supplement</option>
+                                <option value="2D30–2D7F">Tifinagh</option>
+                                <option value="2D80–2DDF">Ethiopic Extended</option>
+                                <option value="2DE0–2DFF">Cyrillic Extended-A</option>
+                                <option value="2E00–2E7F">Supplemental Punctuation</option>
+                                <option value="2E80-2EFF">CJK Radicals Supplement</option>
+                                <option value="2F00-2FDF">Kangxi Radicals</option>
+                                <option value="2FF0-2FFF">Ideographic Description Characters</option>
+                                <option value="3000-303F">CJK Symbols and Punctuation</option>
+                                <option value="3040-309F" class="Japanese SelectorUpdater">Hiragana</option>
+                                <option value="30A0-30FF" class="Japanese SelectorUpdater">Katakana</option>
+                                <option value="3100-312F">Bopomofo</option>
+                                <option value="3130-318F">Hangul Compatibility Jamo</option>
+                                <option value="3190-319F">Kanbun</option>
+                                <option value="31A0-31BF">Bopomofo Extended</option>
+                                <option value="31C0–31EF">CJK Strokes</option>
+                                <option value="31F0-31FF">Katakana Phonetic Extensions</option>
+                                <option value="3200-32FF">Enclosed CJK Letters and Months</option>
+                                <option value="3300-33FF">CJK Compatibility</option>
+                                <option value="3400-4DBF">CJK Unified Ideographs Extension A</option>
+                                <option value="4DC0-4DFF">Yijing Hexagram Symbols</option>
+                                <option value="4E00-9FFF" class="Japanese SelectorUpdater">CJK Unified Ideographs</option>
+                                <option value="A000-A48F">Yi Syllables</option>
+                                <option value="A490-A4CF">Yi Radicals</option>
+                                <option value="A4D0–A4FF">Lisu</option>
+                                <option value="A500–A63F">Vai</option>
+                                <option value="A640–A69F">Cyrillic Extended-B</option>
+                                <option value="A6A0–A6FF">Bamum</option>
+                                <option value="A700–A71F">Modifier Tone Letters</option>
+                                <option value="A720–A7FF">Latin Extended-D</option>
+                                <option value="A800–A82F">Syloti Nagri</option>
+                                <option value="A830–A83F">Common Indic Number Forms</option>
+                                <option value="A840–A87F">Phags-pa</option>
+                                <option value="A880–A8DF">Saurashtra</option>
+                                <option value="A8E0–A8FF">Devanagari Extended</option>
+                                <option value="A900–A92F">Kayah Li</option>
+                                <option value="A930–A95F">Rejang</option>
+                                <option value="A960–A97F">Hangul Jamo Extended-A</option>
+                                <option value="A980–A9DF">Javanese</option>
+                                <option value="A9E0–A9FF">Myanmar Extended-B</option>
+                                <option value="AA00–AA5F">Cham</option>
+                                <option value="AA60–AA7F">Myanmar Extended-A</option>
+                                <option value="AA80–AADF">Tai Viet</option>
+                                <option value="AAE0–AAFF">Meetei Mayek Extensions</option>
+                                <option value="AB00–AB2F">Ethiopic Extended-A</option>
+                                <option value="AB30–AB6F">Latin Extended-E</option>
+                                <option value="ABC0–ABFF">Meetei Mayek</option>
+                                <option value="AC00-D7AF">Hangul Syllables</option>
+                                <option value="D7B0–D7FF">Hangul Jamo Extended-B</option>
+                                <option value="D800-DB7F">High Surrogates</option>
+                                <option value="DB80-DBFF">High Private Use Surrogates</option>
+                                <option value="DC00-DFFF">Low Surrogates</option>
+                                <option value="E000-F8FF" class="Features SelectorUpdater">Private Use Area</option>
+                                <option value="F900-FAFF">CJK Compatibility Ideographs</option>
+                                <option value="FB00-FB4F" class="Features SelectorUpdater">Alphabetic Presentation Forms</option>
+                                <option value="FB50-FDFF">Arabic Presentation Forms-A</option>
+                                <option value="FE00-FE0F">Variation Selectors</option>
+                                <option value="FE10–FE1F">Vertical forms</option>
+                                <option value="FE20-FE2F">Combining Half Marks</option>
+                                <option value="FE30-FE4F">CJK Compatibility Forms</option>
+                                <option value="FE50-FE6F">Small Form Variants</option>
+                                <option value="FE70-FEFF">Arabic Presentation Forms-B</option>
+                                <option value="FF00-FFEF">Halfwidth and Fullwidth Forms</option>
+                                <option value="FFF0-FFFF">Specials</option>
+                                <option value="10000-1007F">Linear B Syllabary</option>
+                                <option value="10080-100FF">Linear B Ideograms</option>
+                                <option value="10100-1013F">Aegean Numbers</option>
+                                <option value="10300-1032F">Old Italic</option>
+                                <option value="10330-1034F">Gothic</option>
+                                <option value="10380-1039F">Ugaritic</option>
+                                <option value="10400-1044F">Deseret</option>
+                                <option value="10450-1047F">Shavian</option>
+                                <option value="10480-104AF">Osmanya</option>
+                                <option value="10800-1083F">Cypriot Syllabary</option>
+                                <option value="1D000-1D0FF">Byzantine Musical Symbols</option>
+                                <option value="1D100-1D1FF">Musical Symbols</option>
+                                <option value="1D300-1D35F">Tai Xuan Jing Symbols</option>
+                                <option value="1D400-1D7FF">Mathematical Alphanumeric Symbols</option>
+                                <option value="20000-2A6DF">CJK Unified Ideographs Extension B</option>
+                                <option value="2F800-2FA1F">CJK Compatibility Ideographs Supplement</option>
+                                <option value="E0000-E007F">Tags</option>
+                            </select>
+                        </div>
+                        <div class="Content">
+                            <h4>HTML entites</h4>
+                            <select name="ranges" multiple>
+                                <option value="00A0-00FF">HTML Latin 1</option>
+                                <option value="0022,0026,0027,003C,003E,0152,0153,0160,0161,0178,02C6,02DC,2002,2003,2009,200C-200F,2013,2014,2018,201A,201C-201E,2020-2022,2030,2039,203A,20AC" class="Entities SelectorUpdater" selected="">HTML Special</option>
+                                <option value="0912,0391-03A9,03B1-03C9,03D1,03D2,03D6,2026,2032,2033,203E,2044,2111,2118,211C,2122,2135,2190-2194,21B5,21D0-21D4,2200,2202,2203,2205,2207,2208,2209,220B,220F,2211,2212,2217,221A,221D,221E,2220,2227-222B,2234,223C,2245,2248,2260,2261,2264,2265,2282-2284,2286,2287,2295,2297,22A5,22C5,2308-230B,2329,232A,25CA,2660,2663,2665,2666" class="Entities SelectorUpdater" selected="">HTML Symbol</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="Action">
+                        <button class="triggerAdvancedState" type="button"><span class="Simple">Switch to advanced view</span><span class="Advanced">Switch to simple view</span></button>
+                    </div>
+                </li>
+                <li id="Hinting" class="Optionset">
+                    <h3><button class="ActiveStateTrigger" type="button"><strong>Hinting</strong> <small class="Description"><span class="hinting"></span></small></button></h3>
+                    <div class="Columns">
+                        <ul class="Content">
+                            <li><label><input type="radio" name="hinting" value="gdi" checked data-description="Add Windows"> <span>Add Windows hints</span></label></li>
+                            <li><label><input type="radio" name="hinting" value="cleartype" data-description="Add ClearType"> <span>Add ClearType hints</span></label></li>
+                            <li><label><input type="radio" name="hinting" value="grayscale" data-description="Add Grayscale"> <span>Add Grayscale hints</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input type="radio" name="hinting" value="nohint" data-description="Remove all"> <span>Remove all hints</span></label></li>
+                            <li><label><input type="radio" name="hinting" value="" data-description="Keep existing"> <span>Keep existing hints</span></label></li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="Optimizations" class="Optionset">
+                    <h3><button class="ActiveStateTrigger" type="button"><strong>Optimizations</strong> <small class="Description"><span class="fixes"></span></small></button></h3>
+                    <div class="Columns">
+                        <ul class="Content">
+                            <li><label><input type="checkbox" name="fixes" value="metrics" checked data-description="vertical metrics"> <span>Streamline vertical metrics</span></label></li>
+                            <li><label><input type="checkbox" name="fixes" value="glyphs" data-description="glyph paths"> <span>Optimize glyph paths</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input type="checkbox" name="fixes" value="references" checked data-description="glyph references"> <span>Fix glyph references</span></label></li>
+                            <li><label><input type="checkbox" name="fixes" value="name" checked data-description="font name"> <span>Fix font name</span></label></li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="Stylesheets" class="Optionset">
+                    <h3><button class="ActiveStateTrigger" type="button"><strong>Stylesheets</strong> <small class="Description"><span class="css"></span></small></button></h3>
+                    <div class="Columns">
+                        <ul class="Content">
+                            <li><label><input class="DisableTrigger" type="checkbox" name="css" value="create" checked data-description="Generate @font-face"> <span>Generate CSS @font-face</span></label></li>
+                            <li><label><input type="checkbox" name="css" value="group" checked data-description="group families"> <span>Group font families</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li><label><input type="checkbox" name="css" value="base64" data-description="include fonts"> <span>Include fonts into CSS</span></label></li>
+                            <li><label><input type="checkbox" name="css" value="local" data-description="prefer local fonts"> <span>Prefer local fonts</span></label></li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="Preview" class="Optionset">
+                    <h3><button class="ActiveStateTrigger" type="button"><strong>Preview</strong> <small class="Description"><span class="html"></span></small></button></h3>
+                    <div class="Columns">
+                        <ul class="Content">
+                            <li><label><input class="DisableTrigger" type="checkbox" name="html" value="create" checked data-description="Generate HTML preview"> <span>Generate HTML preview</span></label></li>
+                        </ul>
+                        <ul class="Content">
+                            <li class="Text"><label><input type="checkbox" name="html" value="fontsmoothie" data-description="include Font Smoothie"> <span>Include <a href="https://gist.github.com/letorbi/5177771">Font Smoothie</a> script</span></label></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="Action">
+                <button class="SubmitButton" type="submit"><strong>Generate & download your @font-face package</strong> <span class="FlowyButton button_right"></span></button>
+            </div>
+            <div class="Error"></div>
+        </form>
+    </div>
+    <footer id="Footer" class="Section">
+        <p>Copyright 2016 <a href="https://pixelsvsbytes.com">Pixels|Bytes</a></p>
+    </footer>
+    <iframe id="GeneratorTarget"></iframe>
+</div>
+    </div>
+</body>
+
+</html>

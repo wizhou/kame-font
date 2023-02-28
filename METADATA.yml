@@ -1,0 +1,20 @@
+---
+unified font repository version: "0.3"
+unified font repository url: https://github.com/raphaelbastide/Unified-Font-Repository/
+typeface family:
+  name: Kame
+  tags:
+  - hybrid
+  - acute
+  - titling
+  - condesed
+  - book
+  - strong identity
+  - mouving
+  repository url: https://github.com/user/Demo
+  project url: https://romaingoetz.fr/fr/works/kame
+  tools:
+  - Fontforge
+  sample text:
+  - fr_FR: Joyeux, ivre, fatigué, le nez qui pique, Clown Hary skie dans l'ombre
+...

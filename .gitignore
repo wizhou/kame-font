@@ -1,0 +1,15 @@
+.DS_Store
+*.idlk
+
+## Researchs elements
+/_PRIVATE
+/_PRIVATE/*
+
+## Test fonts
+/TestFonts
+
+## Specimen source
+/documentation/specimen/KAME-SPECIMEN.indd
+
+## Infos & oldies
+/sources/0-legacy-fontlab

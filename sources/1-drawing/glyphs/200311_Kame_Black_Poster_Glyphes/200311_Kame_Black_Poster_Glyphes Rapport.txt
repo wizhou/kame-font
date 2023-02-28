@@ -1,0 +1,39 @@
+Rapport d'assemblage
+
+-----------------------------------------------------------------------------
+Document :
+Nom : 200311_Kame_Black_Poster_Glyphes.ai
+Mode : Couleurs CMJN
+Profil colorimétrique : Coated FOGRA39 (ISO 12647-2:2004)
+Unité : points
+Dimensions : 1000 pt x 1000 pt
+Afficher les images en mode Tracés : INACTIF
+Mettre en évidence les polices substituées : INACTIF
+Mettre en évidence les glyphes substitués : INACTIF
+Conserver le caractère modifiable du texte
+Simuler le papier couleur : INACTIF
+
+-----------------------------------------------------------------------------
+Objets en tons directs :
+
+-----------------------------------------------------------------------------
+Polices manquantes :SANS
+
+-----------------------------------------------------------------------------
+Polices protégées non assemblées :SANS
+
+-----------------------------------------------------------------------------
+Polices :
+SANS
+
+-----------------------------------------------------------------------------
+Polices incorporées :
+SANS
+
+-----------------------------------------------------------------------------
+Liens manquants :
+SANS
+
+-----------------------------------------------------------------------------
+Images liées :
+SANS
