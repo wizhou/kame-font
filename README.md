@@ -1,8 +1,7 @@
 # Kame Font
 FR : Kame est une typographie hybride et mutative avec trois graisses. Tranchante, lisible et performative, elle sème le trouble au sein de composition strictes et rigides. Les deux graisses **Kame Poster Regular** et **Kame Poster Black** permettent des arrangements de phrases en cascade et apportent de l’importance à la lisibilité. Enfin, une minuscule, la **Kame Book**, complète la famille pour les utilisations en texte courant. Inspiré de l’empattement humaniste et de l’angularité moderne, elle découpe les lettres, allégeant leur affichage.
 
-![Kame Poster Black Specimen](/documentation/sepcimen/Kame-Specimen.png)
-
+![Kame Poster Black Specimen](/documentation/specimen/Kame-Specimen.png)
 ---
 
 EN : Kame is a hybrid and mutative typography with three weights. Acute, legible and performative, it brings trouble within the rigidity and strictness of compositions. The two weights **Kame Poster Regular** and **Kame Poster Black** allow for cascading phrase arrangements and add importance to readability. Finally, a tiny one, the **Kame Book**, completes the family for common text uses. Inspired by humanist font design and modern angularity, Kame cut the letters, lightening their display.
@@ -44,7 +43,7 @@ EN : Kame is licensed under the SIL Open Font License, Version 1.1. You can find
 ## Histoire et Crédits / History and Credits
 FR : Kame est un projet commencé en 2014 lors du workshop <u>Écrire en grand</u> de Pierre di Sciullo à la *Haute École des Arts du Rhin* à Strasbourg. À ce moment, seule la **Kame Sans**, police monospace de titrage, existait.
 
-![Ils sont comme nous](/documentation/sepcimen/history.jpg)
+![Ils sont comme nous](/documentation/specimen/history.jpg)
 
 Ensuite, en 2018, à l'occasion de l'exposition / séminaire <u>Black Lens / Op-Film - Une Archéologie de l'Optique</u> porté par Khiasma et Olivier Marbœuf à <del>La colonie</del>, j'ai rélaisé une version de labeur la police Kame, qui était utilisée dans l'identité visuelle et les documents promotionnels.
 
