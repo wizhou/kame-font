@@ -59,8 +59,6 @@ FR : La famille Kame est distribuée avec la licence SIL Open Font License, Vers
 
 EN: Kame is a project started in 2014 at the workshop <u>Write in big</u> of Pierre di Sciullo in the school *Haute École des Arts du Rhin* in Strasbourg. At that time, only the **Kame Sans**, a monospace titling font, existed.
 
-![Ils sont comme nous](/documentation/specimen/history.jpg)
-
 Then, in 2018, on the behalf of the exhibition/seminary: <u>Black Lens/Op-Film - An Archaeology of Optics</u> launched by Khiasma and Olivier Marbœuf at ~~La Colonie~~, I re-made a version of the Kame font, adding a text oriented one. Both were used inside the visual identity and promotional documents of the event.
 
 In 2020, alongside the redesign of INACT's website, I made the **Kame Poster Black** version. As well as many improvements and polishing for the other two fonts, which became **Kame Boook** and **Kame Poster Regular**.
@@ -70,8 +68,6 @@ The Kame family will still have the opportunity to evolve, probably with the add
 ---
 
 FR : Kame est un projet commencé en 2014 lors du workshop <u>Écrire en grand</u> de Pierre di Sciullo à la *Haute École des Arts du Rhin* à Strasbourg. À ce moment, seule la **Kame Sans**, police monospace de titrage, existait.
-
-![Ils sont comme nous](/documentation/specimen/history.jpg)
 
 Ensuite, en 2018, à l'occasion de l'exposition / séminaire <u>Black Lens / Op-Film - Une Archéologie de l'Optique</u> porté par Khiasma et Olivier Marbœuf à ~~La colonie~~, j'ai rélaisé une version de labeur la police Kame, qui était utilisée dans l'identité visuelle et les documents promotionnels.
 
